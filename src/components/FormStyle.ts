@@ -9,7 +9,7 @@ export const StyledInput = styled.input`
   color: #fff !important;
   font-weight: lighter;
   letter-spacing: 2px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   margin-right: 20px;
   font-size: 20px;
 `
@@ -34,25 +34,3 @@ export const StyledButton = styled.button`
     outline: none;
   }
 `
-// export const StyledButton = styled.button`
-//   button {
-//     width: 40%;
-//     border: 0;
-//     padding: 8px 20px;
-//     margin: 0 2px;
-//     border-radius: 2px;
-//     letter-spacing: 1px;
-//     font-size: 1.5rem;
-//     cursor: pointer;
-//     background-color: #f15186;
-//     color: #fff;
-//   }
-  
-//   button:hover {
-//     opacity: 0.9
-//   }
-  
-//   *:focus {
-//     outline: none;
-//   }
-// `

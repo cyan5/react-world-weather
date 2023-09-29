@@ -6,6 +6,8 @@ import Result from "./components/Result";
 import { useState } from "react";
 import { StyledContainer, StyledWrapper } from "./AppStyle"
 import Loading from "./components/Loading";
+import MenuButton from "./components/Menu";
+import Menu from "./components/Menu";
 // import './App.css';
 
 type ResultStateType = {
@@ -29,8 +31,15 @@ function App() {
 
   const [loading, setLoading] = useState<boolean>(false)
 
-  const getWeather = (event: React.FormEvent<HTMLFormElement>) => {
+  const errorMessage = (error: string) => {
+    if (error == "TypeError"){
+      alert("都市名が不適切です。")
+    } else {
+      alert(`${error}が発生しました。ページをリロードして、もう一度トライしてください。`)
+    }
+  }
 
+  const getWeather = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     setLoading(true)
     fetch(`http://api.weatherapi.com/v1/current.json?key=b41c33ab7d784da98e710808232706&q=${city}&aqi=no`)
@@ -46,13 +55,13 @@ function App() {
       setCity("")
       setLoading(false)
     })
-
-    .catch(error => alert(`エラー${error}が発生しました。ページをリロードして、もう一度トライしてください。`))
+    .catch(error => errorMessage(error.name))
   }
 
   return (
     <StyledWrapper>
       <StyledContainer>
+        <Menu />
         <Title />
         <Form city={city} setCity={setCity} getWeather={getWeather}/>
         {loading ? <Loading /> : <Result result={result}/>}
