@@ -2,10 +2,7 @@
 
 import { createGlobalStyle } from "styled-components"
 
-export const MainStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-
+export const GlobalStyle = createGlobalStyle`
   html {
     font-size: 62.5%;
   }
