@@ -30,9 +30,8 @@ export const StyledButton = styled.button`
     opacity: 0.8
   }
   
-  *:focus {
+  &:focus {
     outline: none;
-    color: green;
   }
 `
 // export const StyledButton = styled.button`

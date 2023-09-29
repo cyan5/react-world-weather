@@ -5,6 +5,7 @@ import Form from "./components/Form";
 import Result from "./components/Result";
 import { useState } from "react";
 import { StyledContainer, StyledWrapper } from "./AppStyle"
+import Loading from "./components/Loading";
 // import './App.css';
 
 type ResultStateType = {
@@ -26,8 +27,12 @@ function App() {
     icon: "", 
   })
 
+  const [loading, setLoading] = useState<boolean>(false)
+
   const getWeather = (event: React.FormEvent<HTMLFormElement>) => {
+
     event.preventDefault()
+    setLoading(true)
     fetch(`http://api.weatherapi.com/v1/current.json?key=b41c33ab7d784da98e710808232706&q=${city}&aqi=no`)
     .then(res => res.json())
     .then(data => {
@@ -39,6 +44,7 @@ function App() {
         icon: data.current.condition.icon
       })
       setCity("")
+      setLoading(false)
     })
 
     .catch(error => alert(`エラー${error}が発生しました。ページをリロードして、もう一度トライしてください。`))
@@ -49,7 +55,7 @@ function App() {
       <StyledContainer>
         <Title />
         <Form city={city} setCity={setCity} getWeather={getWeather}/>
-        <Result result={result}/>
+        {loading ? <Loading /> : <Result result={result}/>}
       </StyledContainer>
     </StyledWrapper>
   );
