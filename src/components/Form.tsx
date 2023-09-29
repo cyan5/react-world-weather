@@ -1,23 +1,23 @@
 // Form.tsx
 
-import { SButton, StyledInput } from "./FormStyle"
+import { StyledButton, StyledInput } from "./FormStyle"
 
 type FormPropsType = {
   setCity: React.Dispatch<React.SetStateAction<string>>
-  getWeather: (event: any) => void
+  getWeather: (event: React.FormEvent<HTMLFormElement>) => void
 }
 
 const Form = (props: FormPropsType) => {
   return(
     <div>
-      <form>
+      <form onSubmit={props.getWeather}>
         <StyledInput 
           type="text" 
           name="city" 
           placeholder="City Name"
           onChange={event => props.setCity(event.target.value)}
         />
-        <SButton type="submit" onClick={props.getWeather}>Get Weather</SButton>
+        <StyledButton type="submit">Get Weather</StyledButton>
       </form>
     </div>
   );

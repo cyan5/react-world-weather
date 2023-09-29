@@ -14,7 +14,7 @@ export const StyledInput = styled.input`
   font-size: 20px;
 `
 
-export const SButton = styled.button`
+export const StyledButton = styled.button`
   width: 40%;
   border: 0;
   padding: 8px 20px;
@@ -35,7 +35,7 @@ export const SButton = styled.button`
     color: green;
   }
 `
-// export const SButton = styled.button`
+// export const StyledButton = styled.button`
 //   button {
 //     width: 40%;
 //     border: 0;
