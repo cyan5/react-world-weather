@@ -1,17 +1,13 @@
 // Title.tsx
 
-// /* Title.js */
-// h1 {
-//     font-weight: 400;
-//     margin: 0px 0 50px;
-// }
+import { StyledH1 } from "./TitleStyle";
 
 const Title = () => {
   return(
     <div>
-      <h1>
+      <StyledH1>
         React World Weather
-      </h1>
+      </StyledH1>
     </div>
   );
 };

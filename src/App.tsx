@@ -1,10 +1,11 @@
-// import './App.css';
+// App.tsx
 
 import Title from "./components/Title";
 import Form from "./components/Form";
 import Result from "./components/Result";
 import { useState } from "react";
-import { StyledTitle } from "./App"
+import { StyledContainer, StyledWrapper } from "./AppStyle"
+// import './App.css';
 
 type ResultStateType = {
   country: string
@@ -39,11 +40,13 @@ function App() {
   }
 
   return (
-    <StyledTitle>
-      <Title />
-      <Form setCity={setCity} getWeather={getWeather}/>
-      <Result result={result}/>
-    </StyledTitle>
+    <StyledWrapper>
+      <StyledContainer>
+        <Title />
+        <Form setCity={setCity} getWeather={getWeather}/>
+        <Result result={result}/>
+      </StyledContainer>
+    </StyledWrapper>
   );
 }
 
