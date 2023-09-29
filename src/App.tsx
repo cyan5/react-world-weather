@@ -37,6 +37,8 @@ function App() {
       conditionText: data.current.condition.text, 
       icon: data.current.condition.icon, 
     }))
+
+    .catch(error => alert(`エラー${error}が発生しました。ページをリロードして、もう一度トライしてください。`))
   }
 
   return (

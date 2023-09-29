@@ -3,7 +3,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
-import { GlobalStyle } from './index.ts'
+import { GlobalStyle } from './mainStyle.ts'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 // import './App.css';
 

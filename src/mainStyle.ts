@@ -1,4 +1,4 @@
-// index.ts
+// mainStyle.ts
 
 import { createGlobalStyle } from "styled-components"
 
