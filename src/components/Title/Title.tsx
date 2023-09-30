@@ -1,6 +1,6 @@
 // Title.tsx
 
-import { StyledH1 } from "./TitleStyle";
+import styled from "styled-components"
 
 const Title = () => {
   return(
@@ -11,5 +11,10 @@ const Title = () => {
     </div>
   );
 };
+
+const StyledH1 = styled.h1`
+  font-weight: 400;
+  margin: 20px 0 50px;
+`
 
 export default Title;

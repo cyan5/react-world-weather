@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: 'Raleway','Noto Sans JP', sans-serif;
+    font-family: 'Raleway','M PLUS Rounded 1c','Noto Sans JP', sans-serif;
     font-weight: 400;
     font-size: 1.6rem;
     font-display: swap;
