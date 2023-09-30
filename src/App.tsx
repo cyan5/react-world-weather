@@ -1,13 +1,13 @@
 // App.tsx
 
-import Title from "./components/Title/Title";
+import Title from "./components/Title";
 import Form from "./components/Form/Form";
 import Result from "./components/Result/Result";
 import { useState } from "react";
 import { StyledContainer, StyledWrapper } from "./AppStyle"
 import Loading from "./components/Loading/Loading";
-import MenuButton from "./components/MenuButton/MenuButton";
-import MenuContents from "./components/MenuContents/MenuContents";
+import MenuContents from "./components/MenuContents";
+import MenuToggleButton from "./components/MenuToggleButton";
 // import './App.css';
 
 type ResultStateType = {
@@ -70,17 +70,17 @@ function App() {
     }
   };
 
-  const [language, setLanguage] = useState<string>("en")
+  const [lang, setLang] = useState<string>("en")
 
   return (
     <StyledWrapper>
       <StyledContainer>
-        <MenuButton toggleMenuOpen={toggleMenuOpen}/>
+        <MenuToggleButton buttonStyle="≡" toggleMenuOpen={toggleMenuOpen}/>
         <Title />
         <Form city={city} setCity={setCity} getWeather={getWeather}/>
         {loading ? <Loading /> : <Result result={result}/>}
       </StyledContainer>
-      {menuOpen && <MenuContents toggleMenuOpen={toggleMenuOpen} operateMenuOpen={operateMenuOpen} language={language} setLanguage={setLanguage}/>}
+      {menuOpen && <MenuContents toggleMenuOpen={toggleMenuOpen} operateMenuOpen={operateMenuOpen} lang={lang} setLang={setLang}/>}
     </StyledWrapper>
   );
 }
