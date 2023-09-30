@@ -6,8 +6,7 @@ import Result from "./components/Result";
 import { useState } from "react";
 import { StyledContainer, StyledWrapper } from "./AppStyle"
 import Loading from "./components/Loading";
-import MenuButton from "./components/Menu";
-import Menu from "./components/Menu";
+import MenuButton from "./components/MenuButton";
 // import './App.css';
 
 type ResultStateType = {
@@ -58,11 +57,19 @@ function App() {
     .catch(error => errorMessage(error.name))
   }
 
+  const [menuOpen, setMenuOpen] = useState<boolean>(false)
+
+  const toggleMenuOpen = () => {
+    setMenuOpen(!menuOpen)
+  }
+
   return (
     <StyledWrapper>
       <StyledContainer>
-        <Menu />
+        <MenuButton toggleMenuOpen={toggleMenuOpen}/>
+        {/* <Menu /> */}
         <Title />
+        {menuOpen ? <div>true</div> : <div>false</div>}
         <Form city={city} setCity={setCity} getWeather={getWeather}/>
         {loading ? <Loading /> : <Result result={result}/>}
       </StyledContainer>

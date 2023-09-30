@@ -2,7 +2,7 @@
 
 import styled from "styled-components"
 
-export const StyledMenu = styled.div`
+export const StyledMenuButton = styled.div`
   position: absolute;
   top: 0px;
   left: 0px;
