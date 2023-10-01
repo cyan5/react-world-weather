@@ -3,9 +3,25 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
-import { GlobalStyle } from './mainStyle.ts'
+import { createGlobalStyle } from "styled-components"
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 // import './App.css';
+
+const GlobalStyle = createGlobalStyle`
+  html {
+    font-size: 62.5%;
+  }
+
+  body {
+    font-family: 'Raleway','M PLUS Rounded 1c','Noto Sans JP', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    font-display: swap;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+`
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

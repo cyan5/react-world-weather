@@ -1,6 +1,6 @@
 // MenuContents.tsx
 
-import LangButton from "./MenuContents/LangButton/LangButton";
+import LangButton from "./MenuContents/LangButton";
 import styled from "styled-components"
 import MenuToggleButton from "./MenuToggleButton";
 

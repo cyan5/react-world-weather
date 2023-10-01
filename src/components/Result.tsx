@@ -1,6 +1,6 @@
 // Result.tsx
 
-import { StyledCity, StyledCondition, StyledCountry, StyledTemp } from "./ResultStyle"
+import styled from "styled-components"
 
 type ResultPropsType = {
   result: {
@@ -25,5 +25,31 @@ const Result = ({ result }: ResultPropsType) => {
     </div>
   );
 };
+
+const StyledCountry = styled.div`
+  font-size: 2rem;
+`
+
+const StyledCity = styled.div`
+  font-size: 4rem;
+`
+
+const StyledTemp = styled.div`
+  font-size: 6rem;
+  margin: 10px 0;
+  color: #f15186;
+
+  > span {
+    font-size: 3rem;
+    color: #333;
+  }
+`
+
+const StyledCondition = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+`
 
 export default Result;

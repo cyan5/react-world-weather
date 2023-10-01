@@ -1,14 +1,13 @@
 // App.tsx
 
 import Title from "./components/Title";
-import Form from "./components/Form/Form";
-import Result from "./components/Result/Result";
+import Form from "./components/Form";
+import Result from "./components/Result";
 import { useState } from "react";
-import { StyledContainer, StyledWrapper } from "./AppStyle"
-import Loading from "./components/Loading/Loading";
+import Loading from "./components/Loading";
 import MenuContents from "./components/MenuContents";
 import MenuToggleButton from "./components/MenuToggleButton";
-// import './App.css';
+import styled from "styled-components";
 
 type ResultStateType = {
   country: string
@@ -32,7 +31,7 @@ function App() {
   const [loading, setLoading] = useState<boolean>(false)
 
   const errorMessage = (error: string) => {
-    if (error == "TypeError"){
+    if (error === "TypeError"){
       alert("都市名が不適切です。")
     } else {
       alert(`${error}が発生しました。ページをリロードして、もう一度トライしてください。`)
@@ -84,5 +83,28 @@ function App() {
     </StyledWrapper>
   );
 }
+
+const StyledWrapper = styled.div`
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  background: url("src/background-image.jpg") center center no-repeat;
+  background-size: cover;
+`
+
+const StyledContainer = styled.div`
+  width: 50vw;
+  text-align: center;
+  padding: 20px 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(20px);
+  box-shadow: 4px 4px 13px 5px rgba(0,0,0,0.25);
+
+  @media only screen and (max-width: 700px) {
+    width: 80vw;
+  }
+`
 
 export default App;

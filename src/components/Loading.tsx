@@ -1,8 +1,14 @@
-// LoadingStyle.ts
+// Loading.tsx
 
 import styled from "styled-components"
 
-export const StyledH3 = styled.h3`
+const Loading = () => {
+  return(
+    <StyledH3>Loading ...</StyledH3>
+  );
+};
+
+const StyledH3 = styled.h3`
   color: transparent;
   border: 4px solid #f15186;
   border-top: 4px solid #ffffff;
@@ -18,3 +24,4 @@ export const StyledH3 = styled.h3`
   }
 `
 
+export default Loading;

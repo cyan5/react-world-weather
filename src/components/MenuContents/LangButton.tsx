@@ -25,7 +25,6 @@ const StyledDiv = styled.div`
   #checkbox {
     grid-row: 1;
     grid-column: 1;
-    /* margin-left: 8px; */
     padding-left: 8px;
     font-size: 24px;
     background: transparent;
