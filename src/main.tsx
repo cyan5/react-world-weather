@@ -5,7 +5,6 @@ import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import { createGlobalStyle } from "styled-components"
 import { Helmet, HelmetProvider } from 'react-helmet-async'
-// import './App.css';
 
 const GlobalStyle = createGlobalStyle`
   html {
