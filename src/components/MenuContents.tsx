@@ -1,24 +1,20 @@
 // MenuContents.tsx
 
-import LangButton from "./MenuContents/LangButton";
 import styled from "styled-components"
 import MenuToggleButton from "./MenuToggleButton";
 
 type MenuContentsType = {
   toggleMenuOpen: () => void
   operateMenuOpen: (event: React.MouseEvent) => void
-  lang: string
-  setLang: React.Dispatch<React.SetStateAction<string>>
 }
 
-const MenuContents = ({ toggleMenuOpen, operateMenuOpen, lang, setLang }: MenuContentsType) => {
+const MenuContents = ({ toggleMenuOpen, operateMenuOpen }: MenuContentsType) => {
   return(
     <StyledMenuWrapper onClick={operateMenuOpen}>
       <StyledMenuContents>
         <MenuToggleButton buttonStyle="×" toggleMenuOpen={toggleMenuOpen}/>
-        <h2>Select Language</h2>
-        <LangButton lang={lang} langText="en" setLang={setLang}/>
-        <LangButton lang={lang} langText="ja" setLang={setLang}/>
+        <h2>React World Weather</h2>
+        <p>usage ...</p>
       </StyledMenuContents>
     </StyledMenuWrapper>
   );

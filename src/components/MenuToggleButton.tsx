@@ -20,7 +20,6 @@ const StyledMenuToggleButton = styled.div`
   top: 0px;
   right: 65px;
   font-size: 20pt;
-  color: #575757;
   background: transparent;
   border: 0px;
   

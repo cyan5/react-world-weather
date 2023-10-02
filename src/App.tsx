@@ -69,8 +69,6 @@ function App() {
     }
   };
 
-  const [lang, setLang] = useState<string>("en")
-
   return (
     <StyledWrapper>
       <StyledContainer>
@@ -79,7 +77,7 @@ function App() {
         <Form city={city} setCity={setCity} getWeather={getWeather}/>
         {loading ? <Loading /> : <Result result={result}/>}
       </StyledContainer>
-      {menuOpen && <MenuContents toggleMenuOpen={toggleMenuOpen} operateMenuOpen={operateMenuOpen} lang={lang} setLang={setLang}/>}
+      {menuOpen && <MenuContents toggleMenuOpen={toggleMenuOpen} operateMenuOpen={operateMenuOpen} />}
     </StyledWrapper>
   );
 }

@@ -1,3 +1,23 @@
+# React World Weather
+
+Author: cyan5
+最初のWeb開発アプリケーション
+
+## 開発環境
+WSL2
+
+## 言語
+TypeScript + React
+
+## その他
+* CSS-in-JS: styled-components
+* API: Weather-API, Deepl-Translate
+
+----
+## 実装
+
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -25,3 +45,13 @@ If you are developing a production application, we recommend updating the config
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+
+Deepl翻訳ライブラリ
+npm install deepl-node
+
+Deepl翻訳API
+
+多言語対応ライブラリ
+`i18next`
+
