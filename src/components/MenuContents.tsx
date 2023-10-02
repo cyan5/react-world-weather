@@ -13,8 +13,12 @@ const MenuContents = ({ toggleMenuOpen, operateMenuOpen }: MenuContentsType) => 
     <StyledMenuWrapper onClick={operateMenuOpen}>
       <StyledMenuContents>
         <MenuToggleButton buttonStyle="×" toggleMenuOpen={toggleMenuOpen}/>
-        <h2>React World Weather</h2>
-        <p>usage ...</p>
+        <h2>アプリの使い方</h2>
+        <ul>
+          <li>都市名を入力し Get Weather ボタンをクリックすると、現在の天気が表示されます。</li>
+          <li>都市名は英語で入力してください。</li>
+          <li>スペルミスや存在しない都市名を入れるとエラーになります。</li>
+        </ul>
       </StyledMenuContents>
     </StyledMenuWrapper>
   );
@@ -31,7 +35,11 @@ const StyledMenuWrapper = styled.div`
 
 const StyledMenuContents = styled.div`
   width: 300px;
-  height: 200px;
+  @media only screen and (max-width: 450px) {
+    width: 80vw;
+  }
+
+  /* height: 200px; */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -40,7 +48,16 @@ const StyledMenuContents = styled.div`
   box-shadow: 4px 4px 13px 5px rgba(0,0,0,0.25);
   border-radius: 15px;
   background: rgba(255,255,255,0.15);
-  text-align: center;
+
+  h2 {
+    text-align: center;
+  }
+
+  ul {
+    li {
+      margin-right: 1em;
+    }
+  }
 `
 
 export default MenuContents;
