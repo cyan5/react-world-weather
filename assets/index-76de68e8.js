@@ -123,7 +123,7 @@ Error generating stack: `+i.message+`
     margin: 0em;
     cursor: pointer;
   }
-`,Sy=({toggleMenuOpen:e,operateMenuOpen:t})=>z.jsx(ky,{onClick:t,children:z.jsxs(xy,{children:[z.jsx(Pd,{buttonStyle:"×",toggleMenuOpen:e}),z.jsx("h2",{children:"アプリの使い方"}),z.jsxs("ul",{children:[z.jsx("li",{children:"都市名を入力し Get Weather ボタンをクリックすると、現在の天気が表示されます。"}),z.jsx("li",{children:"都市名は英語で入力してください。"}),z.jsx("li",{children:"スペルミスや存在しない都市名を入れるとエラーになります。"})]})]})}),ky=Ce.div`
+`,Sy=({toggleMenuOpen:e,operateMenuOpen:t})=>z.jsx(ky,{onClick:t,children:z.jsxs(xy,{children:[z.jsx(Pd,{buttonStyle:"×",toggleMenuOpen:e}),z.jsx("h2",{children:"アプリの使い方"}),z.jsxs("ul",{children:[z.jsx("li",{children:"都市名を入力し Get Weather ボタンをクリックすると、現在の天気が表示されます。"}),z.jsx("li",{children:"都市名は英語で入力してください。"}),z.jsx("li",{children:"存在しない都市名やスペルミスはエラーになります。"})]})]})}),ky=Ce.div`
   position: absolute;
   top: 0;
   left: 0;
