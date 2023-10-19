@@ -123,7 +123,7 @@ Error generating stack: `+i.message+`
     margin: 0em;
     cursor: pointer;
   }
-`,Sy=({toggleMenuOpen:e,operateMenuOpen:t})=>z.jsx(ky,{onClick:t,children:z.jsxs(xy,{children:[z.jsx(Pd,{buttonStyle:"×",toggleMenuOpen:e}),z.jsx("h2",{children:"アプリの使い方"}),z.jsxs("ul",{children:[z.jsx("li",{children:"都市名を入力し Get Weather ボタンをクリックすると、現在の天気が表示されます。"}),z.jsx("li",{children:"都市名は英語で入力してください。"}),z.jsx("li",{children:"存在しない都市名やスペルミスはエラーになります。"})]})]})}),ky=Ce.div`
+`,Sy=({toggleMenuOpen:e,operateMenuOpen:t})=>z.jsx(ky,{onClick:t,children:z.jsxs(xy,{children:[z.jsx(Pd,{buttonStyle:"×",toggleMenuOpen:e}),z.jsx("h2",{children:"アプリの使い方"}),z.jsxs("ul",{children:[z.jsx("li",{children:z.jsx("span",{children:"GitHub公開版ではAPIキーを隠しているので、天気の取得はできません。"})}),z.jsx("li",{children:"都市名を入力し Get Weather ボタンをクリックすると、現在の天気が表示されます。"}),z.jsx("li",{children:"都市名は英語で入力してください。"}),z.jsx("li",{children:"存在しない都市名やスペルミスはエラーになります。"})]})]})}),ky=Ce.div`
   position: absolute;
   top: 0;
   left: 0;
@@ -154,8 +154,14 @@ Error generating stack: `+i.message+`
     li {
       margin-right: 1em;
     }
+
+    span {
+      color: red;
+    }
   }
-`,Ey="/react-world-weather/assets/background-image-edf682fc.jpg";function Cy(){const[e,t]=Fe.useState(""),[n,r]=Fe.useState({country:"",cityName:"",temperature:"",conditionText:"",icon:""}),[o,i]=Fe.useState(!1),l=d=>{alert(d==="TypeError"?"都市名が不適切です。":`${d}が発生しました。ページをリロードして、もう一度トライしてください。`)},u=d=>{d.preventDefault(),i(!0),fetch(`http://api.weatherapi.com/v1/current.json?key=b41c33ab7d784da98e710808232706&q=${e}&aqi=no`).then(y=>y.json()).then(y=>{r({country:y.location.country,cityName:y.location.name,temperature:y.current.temp_c,conditionText:y.current.condition.text,icon:y.current.condition.icon}),t(""),i(!1)}).catch(y=>l(y.name))},[s,a]=Fe.useState(!1),m=()=>{a(!s)},h=d=>{d.target===d.currentTarget&&m()};return z.jsxs(Ty,{children:[z.jsxs(Py,{children:[z.jsx(Pd,{buttonStyle:"≡",toggleMenuOpen:m}),z.jsx(uy,{}),z.jsx(ay,{city:e,setCity:t,getWeather:u}),o?z.jsx(vy,{}):z.jsx(dy,{result:n})]}),s&&z.jsx(Sy,{toggleMenuOpen:m,operateMenuOpen:h})]})}const Ty=Ce.div`
+
+
+`,Ey="/react-world-weather/assets/background-image-edf682fc.jpg";function Cy(){const[e,t]=Fe.useState(""),[n,r]=Fe.useState({country:"",cityName:"",temperature:"",conditionText:"",icon:""}),[o,i]=Fe.useState(!1),l=d=>{alert(d==="TypeError"?"都市名が不適切です。":`${d}が発生しました。ページをリロードして、もう一度トライしてください。`)},u=d=>{d.preventDefault(),i(!0),fetch(`http://api.weatherapi.com/v1/current.json?key=dummy&q=${e}&aqi=no`).then(y=>y.json()).then(y=>{r({country:y.location.country,cityName:y.location.name,temperature:y.current.temp_c,conditionText:y.current.condition.text,icon:y.current.condition.icon}),t(""),i(!1)}).catch(y=>l(y.name))},[s,a]=Fe.useState(!1),m=()=>{a(!s)},h=d=>{d.target===d.currentTarget&&m()};return z.jsxs(Ty,{children:[z.jsxs(Py,{children:[z.jsx(Pd,{buttonStyle:"≡",toggleMenuOpen:m}),z.jsx(uy,{}),z.jsx(ay,{city:e,setCity:t,getWeather:u}),o?z.jsx(vy,{}):z.jsx(dy,{result:n})]}),s&&z.jsx(Sy,{toggleMenuOpen:m,operateMenuOpen:h})]})}const Ty=Ce.div`
   width: 100vw;
   height: 100vh;
   display: flex;
