@@ -34,6 +34,7 @@ function App() {
 
   const errorMessage = (error: string) => {
     if (error === "TypeError"){
+      // alert("GitHub公開版では天気の取得はできません。")
       alert("都市名が不適切です。")
     } else {
       alert(`${error}が発生しました。ページをリロードして、もう一度トライしてください。`)
