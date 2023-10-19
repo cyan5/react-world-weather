@@ -15,6 +15,7 @@ const MenuContents = ({ toggleMenuOpen, operateMenuOpen }: MenuContentsType) => 
         <MenuToggleButton buttonStyle="×" toggleMenuOpen={toggleMenuOpen}/>
         <h2>アプリの使い方</h2>
         <ul>
+          <li><span>GitHub公開版ではAPIキーを隠しているので、天気の取得はできません。</span></li>
           <li>都市名を入力し Get Weather ボタンをクリックすると、現在の天気が表示されます。</li>
           <li>都市名は英語で入力してください。</li>
           <li>存在しない都市名やスペルミスはエラーになります。</li>
@@ -57,7 +58,13 @@ const StyledMenuContents = styled.div`
     li {
       margin-right: 1em;
     }
+
+    span {
+      color: red;
+    }
   }
+
+
 `
 
 export default MenuContents;

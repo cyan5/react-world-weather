@@ -5,6 +5,7 @@
 * Date: 2023.10.19
 
 ## 公開ページ
+注意！APIキーを隠しているので天気の表示はできません
 https://cyan5.github.io/react-world-weather/
 
 ## 開発環境
