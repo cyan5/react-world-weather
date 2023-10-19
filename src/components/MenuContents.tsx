@@ -17,7 +17,7 @@ const MenuContents = ({ toggleMenuOpen, operateMenuOpen }: MenuContentsType) => 
         <ul>
           <li>都市名を入力し Get Weather ボタンをクリックすると、現在の天気が表示されます。</li>
           <li>都市名は英語で入力してください。</li>
-          <li>スペルミスや存在しない都市名を入れるとエラーになります。</li>
+          <li>存在しない都市名やスペルミスはエラーになります。</li>
         </ul>
       </StyledMenuContents>
     </StyledMenuWrapper>
