@@ -1,8 +1,8 @@
 # React World Weather
-
-Author: cyan5
-Date: 2023.10.19
 [はじめてつくるReactアプリ with TypeScript （React + TypeScript入門シリーズ）](https://www.amazon.co.jp/%E3%81%AF%E3%81%98%E3%82%81%E3%81%A6%E3%81%A4%E3%81%8F%E3%82%8BReact%E3%82%A2%E3%83%97%E3%83%AA-TypeScript-mod728-ebook/dp/B094Z1R281)を参考に作成したはじめてのWebアプリケーション
+
+* Author: cyan5
+* Date: 2023.10.19
 
 ## 公開ページ
 https://cyan5.github.io/react-world-weather/
