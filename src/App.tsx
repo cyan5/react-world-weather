@@ -8,6 +8,8 @@ import Loading from "./components/Loading";
 import MenuContents from "./components/MenuContents";
 import MenuToggleButton from "./components/MenuToggleButton";
 import styled from "styled-components";
+// image
+import src_back from "./background-image.jpg"
 
 type ResultStateType = {
   country: string
@@ -88,7 +90,7 @@ const StyledWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center; 
-  background: url("src/background-image.jpg") center center no-repeat;
+  background: url('${src_back}') center center no-repeat;
   background-size: cover;
 `
 
